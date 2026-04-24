@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
 
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PROMPT DIVERGENT — Concevoir avec l'IA</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PROMPT DIVERGENT — Concevoir avec l'IA</title>
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
 
     :root {
@@ -861,564 +861,502 @@
     }
   </style>
 </head>
-
 <body>
-
-  <!-- ── LANG SWITCHER ── -->
-  <div class="lang-switcher">
-    <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
-    <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-  </div>
-
-  <div class="page-frame">
-
-    <!-- Art Nouveau corners -->
-    <div class="corner tl">
-      <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 68 C4 36, 36 4, 68 4" stroke="#127676" stroke-width="2" fill="none" />
-        <path d="M4 58 C4 30, 30 4, 58 4" stroke="#E4632E" stroke-width="1" fill="none" opacity="0.5" />
-        <circle cx="4" cy="68" r="3" fill="#127676" />
-        <circle cx="68" cy="4" r="3" fill="#127676" />
-        <path d="M14 54 Q8 34 28 14" stroke="#127676" stroke-width="1.5" fill="none" stroke-dasharray="3 3" />
-        <circle cx="36" cy="36" r="2.5" fill="#E3A535" />
-        <path d="M22 22 Q30 18 34 26 Q38 34 30 38" stroke="#127676" stroke-width="1.5" fill="none" />
-      </svg>
-    </div>
-    <div class="corner tr">
-      <svg viewBox="0 0 72 72" fill="none">
-        <path d="M4 68 C4 36, 36 4, 68 4" stroke="#127676" stroke-width="2" fill="none" />
-        <path d="M4 58 C4 30, 30 4, 58 4" stroke="#E4632E" stroke-width="1" fill="none" opacity="0.5" />
-        <circle cx="4" cy="68" r="3" fill="#127676" />
-        <circle cx="68" cy="4" r="3" fill="#127676" />
-        <path d="M14 54 Q8 34 28 14" stroke="#127676" stroke-width="1.5" fill="none" stroke-dasharray="3 3" />
-        <circle cx="36" cy="36" r="2.5" fill="#E3A535" />
-        <path d="M22 22 Q30 18 34 26 Q38 34 30 38" stroke="#127676" stroke-width="1.5" fill="none" />
-      </svg>
-    </div>
-    <div class="corner bl">
-      <svg viewBox="0 0 72 72" fill="none">
-        <path d="M4 68 C4 36, 36 4, 68 4" stroke="#127676" stroke-width="2" fill="none" />
-        <path d="M4 58 C4 30, 30 4, 58 4" stroke="#E4632E" stroke-width="1" fill="none" opacity="0.5" />
-        <circle cx="4" cy="68" r="3" fill="#127676" />
-        <circle cx="68" cy="4" r="3" fill="#127676" />
-        <circle cx="36" cy="36" r="2.5" fill="#E3A535" />
-        <path d="M22 22 Q30 18 34 26 Q38 34 30 38" stroke="#127676" stroke-width="1.5" fill="none" />
-      </svg>
-    </div>
-    <div class="corner br">
-      <svg viewBox="0 0 72 72" fill="none">
-        <path d="M4 68 C4 36, 36 4, 68 4" stroke="#127676" stroke-width="2" fill="none" />
-        <path d="M4 58 C4 30, 30 4, 58 4" stroke="#E4632E" stroke-width="1" fill="none" opacity="0.5" />
-        <circle cx="4" cy="68" r="3" fill="#127676" />
-        <circle cx="68" cy="4" r="3" fill="#127676" />
-        <circle cx="36" cy="36" r="2.5" fill="#E3A535" />
-        <path d="M22 22 Q30 18 34 26 Q38 34 30 38" stroke="#127676" stroke-width="1.5" fill="none" />
-      </svg>
-    </div>
-
-    <!-- ── HEADER ── -->
-    <header>
-      <div class="header-inner">
-        <div class="header-label" data-i18n="header-label">Guide pratique · IA &amp; pédagogie</div>
-        <h1>PROMPT<br><em>DIVERGENT</em></h1>
-        <p class="header-sub" data-i18n="header-sub">Cinq modèles de prompting pour concevoir des séquences de cours — avec des exemples directement utilisables.</p>
-        <div class="header-badge">
-          <span style="width:8px;height:8px;border-radius:50%;background:var(--retro-jaune);display:inline-block;"></span>
-          <span data-i18n="header-badge">Structure RoTaConFor intégrée</span>
-        </div>
-      </div>
-    </header>
-
-    <!-- ── PROGRESS BAR ── -->
-    <div class="progress-bar-wrap">
-      <div class="progress-bar-fill" id="progressBar" style="width: 14.28%"></div>
-    </div>
-
-    <!-- ── NAV TABS ── -->
-    <nav class="nav-wrap" role="tablist">
-      <button class="nav-tab active" onclick="showSection('intro', this, 1)" role="tab">
+<!-- ── LANG SWITCHER ── -->
+<div class="lang-switcher">
+<button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
+<button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+<div class="page-frame">
+<!-- Art Nouveau corners -->
+<div class="corner tl">
+<svg fill="none" viewbox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 68 C4 36, 36 4, 68 4" fill="none" stroke="#127676" stroke-width="2"></path>
+<path d="M4 58 C4 30, 30 4, 58 4" fill="none" opacity="0.5" stroke="#E4632E" stroke-width="1"></path>
+<circle cx="4" cy="68" fill="#127676" r="3"></circle>
+<circle cx="68" cy="4" fill="#127676" r="3"></circle>
+<path d="M14 54 Q8 34 28 14" fill="none" stroke="#127676" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<circle cx="36" cy="36" fill="#E3A535" r="2.5"></circle>
+<path d="M22 22 Q30 18 34 26 Q38 34 30 38" fill="none" stroke="#127676" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="corner tr">
+<svg fill="none" viewbox="0 0 72 72">
+<path d="M4 68 C4 36, 36 4, 68 4" fill="none" stroke="#127676" stroke-width="2"></path>
+<path d="M4 58 C4 30, 30 4, 58 4" fill="none" opacity="0.5" stroke="#E4632E" stroke-width="1"></path>
+<circle cx="4" cy="68" fill="#127676" r="3"></circle>
+<circle cx="68" cy="4" fill="#127676" r="3"></circle>
+<path d="M14 54 Q8 34 28 14" fill="none" stroke="#127676" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<circle cx="36" cy="36" fill="#E3A535" r="2.5"></circle>
+<path d="M22 22 Q30 18 34 26 Q38 34 30 38" fill="none" stroke="#127676" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="corner bl">
+<svg fill="none" viewbox="0 0 72 72">
+<path d="M4 68 C4 36, 36 4, 68 4" fill="none" stroke="#127676" stroke-width="2"></path>
+<path d="M4 58 C4 30, 30 4, 58 4" fill="none" opacity="0.5" stroke="#E4632E" stroke-width="1"></path>
+<circle cx="4" cy="68" fill="#127676" r="3"></circle>
+<circle cx="68" cy="4" fill="#127676" r="3"></circle>
+<circle cx="36" cy="36" fill="#E3A535" r="2.5"></circle>
+<path d="M22 22 Q30 18 34 26 Q38 34 30 38" fill="none" stroke="#127676" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="corner br">
+<svg fill="none" viewbox="0 0 72 72">
+<path d="M4 68 C4 36, 36 4, 68 4" fill="none" stroke="#127676" stroke-width="2"></path>
+<path d="M4 58 C4 30, 30 4, 58 4" fill="none" opacity="0.5" stroke="#E4632E" stroke-width="1"></path>
+<circle cx="4" cy="68" fill="#127676" r="3"></circle>
+<circle cx="68" cy="4" fill="#127676" r="3"></circle>
+<circle cx="36" cy="36" fill="#E3A535" r="2.5"></circle>
+<path d="M22 22 Q30 18 34 26 Q38 34 30 38" fill="none" stroke="#127676" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- ── HEADER ── -->
+<header>
+<div class="header-inner">
+<div class="header-label" data-i18n="header-label">Guide pratique · IA &amp; pédagogie</div>
+<h1>PROMPT<br/><em>DIVERGENT</em></h1>
+<p class="header-sub" data-i18n="header-sub">Cinq modèles de prompting pour concevoir des séquences de cours — avec des exemples directement utilisables.</p>
+<div class="header-badge">
+<span style="width:8px;height:8px;border-radius:50%;background:var(--retro-jaune);display:inline-block;"></span>
+<span data-i18n="header-badge">Structure RoTaConFor intégrée</span>
+</div>
+</div>
+</header>
+<!-- ── PROGRESS BAR ── -->
+<div class="progress-bar-wrap">
+<div class="progress-bar-fill" id="progressBar" style="width: 14.28%"></div>
+</div>
+<!-- ── NAV TABS ── -->
+<nav class="nav-wrap" role="tablist">
+<button class="nav-tab active" onclick="showSection('intro', this, 1)" role="tab">
         ◈ <span data-i18n="nav-intro">Intro</span>
+</button>
+<button class="nav-tab" onclick="showSection('pattern1', this, 2)" role="tab">
+<span class="tab-num">1</span> Backward Design
       </button>
-      <button class="nav-tab" onclick="showSection('pattern1', this, 2)" role="tab">
-        <span class="tab-num">1</span> Backward Design
+<button class="nav-tab" onclick="showSection('pattern2', this, 3)" role="tab">
+<span class="tab-num">2</span> Tree of Thoughts
       </button>
-      <button class="nav-tab" onclick="showSection('pattern2', this, 3)" role="tab">
-        <span class="tab-num">2</span> Tree of Thoughts
+<button class="nav-tab" onclick="showSection('pattern3', this, 4)" role="tab">
+<span class="tab-num">3</span> SCAMPER
       </button>
-      <button class="nav-tab" onclick="showSection('pattern3', this, 4)" role="tab">
-        <span class="tab-num">3</span> SCAMPER
+<button class="nav-tab" onclick="showSection('pattern4', this, 5)" role="tab">
+<span class="tab-num">4</span> <span data-i18n="nav-p4">Six Chapeaux</span>
+</button>
+<button class="nav-tab" onclick="showSection('pattern5', this, 6)" role="tab">
+<span class="tab-num">5</span> Role-Playing
       </button>
-      <button class="nav-tab" onclick="showSection('pattern4', this, 5)" role="tab">
-        <span class="tab-num">4</span> <span data-i18n="nav-p4">Six Chapeaux</span>
-      </button>
-      <button class="nav-tab" onclick="showSection('pattern5', this, 6)" role="tab">
-        <span class="tab-num">5</span> Role-Playing
-      </button>
-      <button class="nav-tab" onclick="showSection('pipeline', this, 7)" role="tab">
+<button class="nav-tab" onclick="showSection('pipeline', this, 7)" role="tab">
         ⟳ Pipeline
       </button>
-    </nav>
-
-    <!-- ── MAIN ── -->
-    <main>
-
-      <!-- INTRO -->
-      <section class="section active" id="intro">
-        <p class="intro-text" data-i18n-html="intro-p1">
+</nav>
+<!-- ── MAIN ── -->
+<main>
+<!-- INTRO -->
+<section class="section active" id="intro">
+<p class="intro-text" data-i18n-html="intro-p1">
           Concevoir une séquence de cours avec une IA générative, ce n'est pas taper « fais-moi un cours sur… » et
           attendre. La qualité d'une réponse dépend directement de la qualité de la demande. De plus, certains patterns de prompt sont de nature à nous permettre de sortir de nos "rails mentaux"... Ce qui est utile lorsque nous rencontrons des problèmes ! Ce guide présente
           <strong>cinq patterns de prompting</strong> complémentaires, chacun utile à un moment précis du processus de
           conception et qui stimulent la pensée divergente.
         </p>
-
-        <div class="retro-separator"><span class="flourish">❧</span></div>
-
-        <p class="intro-text" style="font-size:0.97rem;" data-i18n-html="intro-p2">
+<div class="retro-separator"><span class="flourish">❧</span></div>
+<p class="intro-text" data-i18n-html="intro-p2" style="font-size:0.97rem;">
           Chaque prompt d'exemple est structuré selon <strong>RoTaConFor</strong> — quatre composantes qui rendent le
           prompt précis, réutilisable, et transférable à d'autres collègues.
         </p>
-
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:1rem; margin:2rem 0;">
-
-          <div style="background:rgba(18,118,118,0.08); border:2px solid var(--retro-teal); border-radius:12px 4px 12px 4px; padding:1.25rem;">
-            <div style="font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:var(--retro-teal); margin-bottom:0.5rem;" data-i18n="rtcf-role-label">Rôle</div>
-            <div style="font-size:0.9rem; line-height:1.55;" data-i18n="rtcf-role-desc">Quelle expertise attribue-t-on à l'IA ? Quel point de vue doit-elle adopter ?</div>
-          </div>
-
-          <div style="background:rgba(125,212,168,0.08); border:2px solid #7dd4a8; border-radius:12px 4px 12px 4px; padding:1.25rem;">
-            <div style="font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:#1a6b44; margin-bottom:0.5rem;" data-i18n="rtcf-task-label">Tâche</div>
-            <div style="font-size:0.9rem; line-height:1.55;" data-i18n="rtcf-task-desc">Que doit-elle faire concrètement ? Un verbe d'action précis et unique.</div>
-          </div>
-
-          <div style="background:rgba(227,165,53,0.08); border:2px solid var(--retro-jaune); border-radius:12px 4px 12px 4px; padding:1.25rem;">
-            <div style="font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:#7a4a00; margin-bottom:0.5rem;" data-i18n="rtcf-ctx-label">Contexte / Contrainte</div>
-            <div style="font-size:0.9rem; line-height:1.55;" data-i18n="rtcf-ctx-desc">Public, durée, règles du jeu, limites à ne pas dépasser.</div>
-          </div>
-
-          <div style="background:rgba(201,170,238,0.08); border:2px solid #c9aaee; border-radius:12px 4px 12px 4px; padding:1.25rem;">
-            <div style="font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:#3a1a80; margin-bottom:0.5rem;" data-i18n="rtcf-fmt-label">Format</div>
-            <div style="font-size:0.9rem; line-height:1.55;" data-i18n="rtcf-fmt-desc">Tableau, liste, fiche, texte court — comment doit se présenter la réponse ?</div>
-          </div>
-
-        </div>
-
-        <div class="tip-box">
-          <span class="tip-icon">💡</span>
-          <span data-i18n="intro-tip">L'objectif n'est pas de remplir mécaniquement les quatre cases à chaque fois, mais de s'assurer qu'on n'en oublie pas une. C'est souvent l'absence de contexte précis ou de format défini qui produit des réponses génériques inutilisables.</span>
-        </div>
-
-        <div style="display:flex; justify-content:flex-end; margin-top:2rem;">
-          <button class="copy-btn" onclick="showSection('pattern1', document.querySelectorAll('.nav-tab')[1], 2)"
-            style="font-family:'Oswald',sans-serif; cursor:pointer;">
-            <span class="copy-btn-text" data-i18n="btn-first-pattern">Premier pattern →</span>
-            <span class="copy-btn-icon">›</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- PATTERN 1 — BACKWARD DESIGN -->
-      <section class="section" id="pattern1">
-        <div class="pattern-header">
-          <div class="pattern-num-badge">1</div>
-          <div class="pattern-title-text">Backward Design</div>
-          <div class="pattern-phase-tag" data-i18n="phase1">① Cadrage</div>
-        </div>
-
-        <div class="pattern-body">
-          <p data-i18n-html="p1-body1">Issu des travaux de <strong>Wiggins &amp; McTighe</strong> (<em>Understanding by Design</em>, 1998), ce
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:1rem; margin:2rem 0;">
+<div style="background:rgba(18,118,118,0.08); border:2px solid var(--retro-teal); border-radius:12px 4px 12px 4px; padding:1.25rem;">
+<div data-i18n="rtcf-role-label" style="font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:var(--retro-teal); margin-bottom:0.5rem;">Rôle</div>
+<div data-i18n="rtcf-role-desc" style="font-size:0.9rem; line-height:1.55;">Quelle expertise attribue-t-on à l'IA ? Quel point de vue doit-elle adopter ?</div>
+</div>
+<div style="background:rgba(125,212,168,0.08); border:2px solid #7dd4a8; border-radius:12px 4px 12px 4px; padding:1.25rem;">
+<div data-i18n="rtcf-task-label" style="font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:#1a6b44; margin-bottom:0.5rem;">Tâche</div>
+<div data-i18n="rtcf-task-desc" style="font-size:0.9rem; line-height:1.55;">Que doit-elle faire concrètement ? Un verbe d'action précis et unique.</div>
+</div>
+<div style="background:rgba(227,165,53,0.08); border:2px solid var(--retro-jaune); border-radius:12px 4px 12px 4px; padding:1.25rem;">
+<div data-i18n="rtcf-ctx-label" style="font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:#7a4a00; margin-bottom:0.5rem;">Contexte / Contrainte</div>
+<div data-i18n="rtcf-ctx-desc" style="font-size:0.9rem; line-height:1.55;">Public, durée, règles du jeu, limites à ne pas dépasser.</div>
+</div>
+<div style="background:rgba(201,170,238,0.08); border:2px solid #c9aaee; border-radius:12px 4px 12px 4px; padding:1.25rem;">
+<div data-i18n="rtcf-fmt-label" style="font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:#3a1a80; margin-bottom:0.5rem;">Format</div>
+<div data-i18n="rtcf-fmt-desc" style="font-size:0.9rem; line-height:1.55;">Tableau, liste, fiche, texte court — comment doit se présenter la réponse ?</div>
+</div>
+</div>
+<div class="tip-box">
+<span class="tip-icon">💡</span>
+<span data-i18n="intro-tip">L'objectif n'est pas de remplir mécaniquement les quatre cases à chaque fois, mais de s'assurer qu'on n'en oublie pas une. C'est souvent l'absence de contexte précis ou de format défini qui produit des réponses génériques inutilisables.</span>
+</div>
+<div style="display:flex; justify-content:flex-end; margin-top:2rem;">
+<button class="copy-btn" onclick="showSection('pattern1', document.querySelectorAll('.nav-tab')[1], 2)" style="font-family:'Oswald',sans-serif; cursor:pointer;">
+<span class="copy-btn-text" data-i18n="btn-first-pattern">Premier pattern →</span>
+<span class="copy-btn-icon">›</span>
+</button>
+</div>
+</section>
+<!-- PATTERN 1 — BACKWARD DESIGN -->
+<section class="section" id="pattern1">
+<div class="pattern-header">
+<div class="pattern-num-badge">1</div>
+<div class="pattern-title-text">Backward Design</div>
+<div class="pattern-phase-tag" data-i18n="phase1">① Cadrage</div>
+</div>
+<div class="pattern-body">
+<p data-i18n-html="p1-body1">Issu des travaux de <strong>Wiggins &amp; McTighe</strong> (<em>Understanding by Design</em>, 1998), ce
             principe commence par la fin : avant de penser aux activités, on définit ce que l'apprenant doit être
             capable de faire à l'issue de la séquence, puis on remonte vers les preuves d'apprentissage observables, et
             seulement ensuite vers les activités.</p>
-          <p data-i18n-html="p1-body2">En prompting, cela se traduit par <strong>trois passes séquentielles</strong>. Chaque passe produit un
+<p data-i18n-html="p1-body2">En prompting, cela se traduit par <strong>trois passes séquentielles</strong>. Chaque passe produit un
             livrable concret. Le rôle attribué à l'IA change à chaque passe — ingénieur pédagogique, puis évaluateur,
             puis concepteur créatif.</p>
-        </div>
-
-        <!-- PASSE 1 -->
-        <div class="prompt-accordion" id="acc1a">
-          <button class="prompt-toggle" onclick="toggleAccordion('acc1a')">
-            <span class="prompt-toggle-label" data-i18n="acc1a-label">Passe 1 — Les objectifs</span>
-            <span class="prompt-toggle-icon">▾</span>
-          </button>
-          <div class="prompt-content">
-            <div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p1a-role">Tu es un enseignant expérimenté.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p1a-task">Formule 5 objectifs d'apprentissage mesurables pour une séquence sur [sujet].</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-ctx">Contexte</span><span data-i18n="p1a-ctx">Public : [décrire les apprenants — âge, filière, niveau]. Durée : [X heures]. Prérequis : [ce qu'ils savent déjà].</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p1a-fmt">Liste numérotée de 5 objectifs. Chacun commence par un verbe d'action observable (ex. : identifier, comparer, justifier, produire). Un objectif par ligne.</span></div>
-            <div class="prompt-footer">
-              <button class="copy-btn" onclick="copyPrompt(this, 'p1a')">
-                <span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
-                <span class="copy-btn-icon">⎘</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <span id="p1a-fr" style="display:none">RÔLE : Tu es un enseignant expérimenté.
+</div>
+<!-- PASSE 1 -->
+<div class="prompt-accordion" id="acc1a">
+<button class="prompt-toggle" onclick="toggleAccordion('acc1a')">
+<span class="prompt-toggle-label" data-i18n="acc1a-label">Passe 1 — Les objectifs</span>
+<span class="prompt-toggle-icon">▾</span>
+</button>
+<div class="prompt-content">
+<div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p1a-role">Tu es un enseignant expérimenté.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p1a-task">Formule 5 objectifs d'apprentissage mesurables pour une séquence sur [sujet].</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-ctx">Contexte</span><span data-i18n="p1a-ctx">Public : [décrire les apprenants — âge, filière, niveau]. Durée : [X heures]. Prérequis : [ce qu'ils savent déjà].</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p1a-fmt">Liste numérotée de 5 objectifs. Chacun commence par un verbe d'action observable (ex. : identifier, comparer, justifier, produire). Un objectif par ligne.</span></div>
+<div class="prompt-footer">
+<button class="copy-btn" onclick="copyPrompt(this, 'p1a')">
+<span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
+<span class="copy-btn-icon">⎘</span>
+</button>
+</div>
+</div>
+</div>
+<span id="p1a-fr" style="display:none">RÔLE : Tu es un enseignant expérimenté.
 TÂCHE : Formule 5 objectifs d'apprentissage mesurables pour une séquence sur [sujet].
 CONTEXTE : Public : [décrire les apprenants — âge, filière, niveau]. Durée : [X heures]. Prérequis : [ce qu'ils savent déjà].
 FORMAT : Liste numérotée de 5 objectifs. Chacun commence par un verbe d'action observable (ex. : identifier, comparer, justifier, produire). Un objectif par ligne.</span>
-        <span id="p1a-en" style="display:none">ROLE: You are an experienced teacher.
+<span id="p1a-en" style="display:none">ROLE: You are an experienced teacher.
 TASK: Write 5 measurable learning objectives for a lesson sequence on [subject].
 CONTEXT: Audience: [describe learners — age, track, level]. Duration: [X hours]. Prerequisites: [what they already know].
 FORMAT: Numbered list of 5 objectives. Each starts with an observable action verb (e.g.: identify, compare, justify, produce). One objective per line.</span>
-
-        <!-- PASSE 2 -->
-        <div class="prompt-accordion" id="acc1b">
-          <button class="prompt-toggle" onclick="toggleAccordion('acc1b')">
-            <span class="prompt-toggle-label" data-i18n="acc1b-label">Passe 2 — Les preuves d'apprentissage</span>
-            <span class="prompt-toggle-icon">▾</span>
-          </button>
-          <div class="prompt-content">
-            <div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p1b-role">Tu es un évaluateur pédagogique habitué à concevoir des grilles d'observation.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p1b-task">Pour chacun des 5 objectifs ci-dessus, propose 3 preuves concrètes et observables montrant qu'un apprenant les a atteints.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-constraint">Contrainte</span><span data-i18n="p1b-constraint">Évite les preuves vagues comme "l'élève comprend" ou "l'élève sait". Chaque preuve doit décrire un comportement visible ou une production concrète.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p1b-fmt">Tableau à 2 colonnes : Objectif | Preuves (3 par ligne). Chaque preuve en une phrase courte.</span></div>
-            <div class="prompt-footer">
-              <button class="copy-btn" onclick="copyPrompt(this, 'p1b')">
-                <span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
-                <span class="copy-btn-icon">⎘</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <span id="p1b-fr" style="display:none">RÔLE : Tu es un enseignant expert en conception de grilles d'observation.
+<!-- PASSE 2 -->
+<div class="prompt-accordion" id="acc1b">
+<button class="prompt-toggle" onclick="toggleAccordion('acc1b')">
+<span class="prompt-toggle-label" data-i18n="acc1b-label">Passe 2 — Les preuves d'apprentissage</span>
+<span class="prompt-toggle-icon">▾</span>
+</button>
+<div class="prompt-content">
+<div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p1b-role">Tu es un évaluateur pédagogique habitué à concevoir des grilles d'observation.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p1b-task">Pour chacun des 5 objectifs ci-dessus, propose 3 preuves concrètes et observables montrant qu'un apprenant les a atteints.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-constraint">Contrainte</span><span data-i18n="p1b-constraint">Évite les preuves vagues comme "l'élève comprend" ou "l'élève sait". Chaque preuve doit décrire un comportement visible ou une production concrète.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p1b-fmt">Tableau à 2 colonnes : Objectif | Preuves (3 par ligne). Chaque preuve en une phrase courte.</span></div>
+<div class="prompt-footer">
+<button class="copy-btn" onclick="copyPrompt(this, 'p1b')">
+<span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
+<span class="copy-btn-icon">⎘</span>
+</button>
+</div>
+</div>
+</div>
+<span id="p1b-fr" style="display:none">RÔLE : Tu es un enseignant expert en conception de grilles d'observation.
 TÂCHE : Pour chacun des 5 objectifs ci-dessus, propose 3 preuves concrètes et observables montrant qu'un apprenant les a atteints.
 CONTRAINTE : Évite les preuves vagues comme "l'élève comprend" ou "l'élève sait". Chaque preuve doit décrire un comportement visible ou une production concrète.
 FORMAT : Tableau à 2 colonnes : Objectif | Preuves (3 par ligne). Chaque preuve en une phrase courte.</span>
-        <span id="p1b-en" style="display:none">ROLE: You are a teacher expert in designing observation rubrics.
+<span id="p1b-en" style="display:none">ROLE: You are a teacher expert in designing observation rubrics.
 TASK: For each of the 5 objectives above, propose 3 concrete, observable pieces of evidence showing that a learner has achieved them.
 CONSTRAINT: Avoid vague evidence like "the student understands" or "the student knows". Each piece of evidence must describe a visible behavior or a concrete output.
 FORMAT: 2-column table: Objective | Evidence (3 per row). Each piece of evidence in one short sentence.</span>
-
-        <!-- PASSE 3 -->
-        <div class="prompt-accordion" id="acc1c">
-          <button class="prompt-toggle" onclick="toggleAccordion('acc1c')">
-            <span class="prompt-toggle-label" data-i18n="acc1c-label">Passe 3 — Les activités</span>
-            <span class="prompt-toggle-icon">▾</span>
-          </button>
-          <div class="prompt-content">
-            <div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p1c-role">Tu es un concepteur pédagogique créatif, attentif à la variété des formats d'apprentissage.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p1c-task">Conçois une activité pédagogique distincte pour chacun des 5 objectifs identifiés en passe 1.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-constraint">Contrainte</span><span data-i18n="p1c-constraint">Chaque activité doit permettre à l'apprenant de produire la preuve identifiée en passe 2. Les activités doivent être de formats différents (évite plusieurs exercices écrits).</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p1c-fmt">Pour chaque activité : un titre, un déroulé en 3 étapes max, la durée estimée, le matériel nécessaire.</span></div>
-            <div class="prompt-footer">
-              <button class="copy-btn" onclick="copyPrompt(this, 'p1c')">
-                <span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
-                <span class="copy-btn-icon">⎘</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <span id="p1c-fr" style="display:none">RÔLE : Tu es un concepteur pédagogique créatif, attentif à la variété des formats d'apprentissage.
+<!-- PASSE 3 -->
+<div class="prompt-accordion" id="acc1c">
+<button class="prompt-toggle" onclick="toggleAccordion('acc1c')">
+<span class="prompt-toggle-label" data-i18n="acc1c-label">Passe 3 — Les activités</span>
+<span class="prompt-toggle-icon">▾</span>
+</button>
+<div class="prompt-content">
+<div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p1c-role">Tu es un concepteur pédagogique créatif, attentif à la variété des formats d'apprentissage.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p1c-task">Conçois une activité pédagogique distincte pour chacun des 5 objectifs identifiés en passe 1.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-constraint">Contrainte</span><span data-i18n="p1c-constraint">Chaque activité doit permettre à l'apprenant de produire la preuve identifiée en passe 2. Les activités doivent être de formats différents (évite plusieurs exercices écrits).</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p1c-fmt">Pour chaque activité : un titre, un déroulé en 3 étapes max, la durée estimée, le matériel nécessaire.</span></div>
+<div class="prompt-footer">
+<button class="copy-btn" onclick="copyPrompt(this, 'p1c')">
+<span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
+<span class="copy-btn-icon">⎘</span>
+</button>
+</div>
+</div>
+</div>
+<span id="p1c-fr" style="display:none">RÔLE : Tu es un concepteur pédagogique créatif, attentif à la variété des formats d'apprentissage.
 TÂCHE : Conçois une activité pédagogique distincte pour chacun des 5 objectifs identifiés en passe 1.
 CONTRAINTE : Chaque activité doit permettre à l'apprenant de produire la preuve identifiée en passe 2. Les activités doivent être de formats différents (évite plusieurs exercices écrits).
 FORMAT : Pour chaque activité : un titre, un déroulé en 3 étapes max, la durée estimée, le matériel nécessaire.</span>
-        <span id="p1c-en" style="display:none">ROLE: You are a creative instructional designer, attentive to the variety of learning formats.
+<span id="p1c-en" style="display:none">ROLE: You are a creative instructional designer, attentive to the variety of learning formats.
 TASK: Design a distinct learning activity for each of the 5 objectives identified in Pass 1.
 CONSTRAINT: Each activity must allow the learner to produce the evidence identified in Pass 2. Activities must be in different formats (avoid multiple written exercises).
 FORMAT: For each activity: a title, a 3-step max sequence, estimated duration, required materials.</span>
-
-        <div class="when-box">
-          <strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br>
-          <span data-i18n="p1-when">En tout début de conception, avant de penser aux activités. Ce pattern évite le piège le plus fréquent : créer des activités intéressantes mais mal alignées avec ce qu'on veut réellement faire apprendre.</span>
-        </div>
-      </section>
-
-      <!-- PATTERN 2 — TREE OF THOUGHTS -->
-      <section class="section" id="pattern2">
-        <div class="pattern-header">
-          <div class="pattern-num-badge">2</div>
-          <div class="pattern-title-text">Tree of Thoughts</div>
-          <div class="pattern-phase-tag" data-i18n="phase2">② Progression</div>
-        </div>
-
-        <div class="pattern-body">
-          <p data-i18n-html="p2-body1">Ce pattern (Yao et al., 2023) consiste à demander à l'IA d'explorer <strong>plusieurs chemins de réflexion
+<div class="when-box">
+<strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br/>
+<span data-i18n="p1-when">En tout début de conception, avant de penser aux activités. Ce pattern évite le piège le plus fréquent : créer des activités intéressantes mais mal alignées avec ce qu'on veut réellement faire apprendre.</span>
+</div>
+</section>
+<!-- PATTERN 2 — TREE OF THOUGHTS -->
+<section class="section" id="pattern2">
+<div class="pattern-header">
+<div class="pattern-num-badge">2</div>
+<div class="pattern-title-text">Tree of Thoughts</div>
+<div class="pattern-phase-tag" data-i18n="phase2">② Progression</div>
+</div>
+<div class="pattern-body">
+<p data-i18n-html="p2-body1">Ce pattern (Yao et al., 2023) consiste à demander à l'IA d'explorer <strong>plusieurs chemins de réflexion
               en parallèle</strong> avant d'en retenir un. Plutôt qu'une réponse linéaire, on obtient plusieurs
             scénarios développés et comparés selon des critères explicites.</p>
-          <p data-i18n-html="p2-body2">Pour la conception pédagogique, il est particulièrement utile pour une décision que les enseignants posent
+<p data-i18n-html="p2-body2">Pour la conception pédagogique, il est particulièrement utile pour une décision que les enseignants posent
             souvent sans y réfléchir explicitement : <strong>dans quel ordre structurer la progression ?</strong></p>
-        </div>
-
-        <div class="tip-box">
-          <span class="tip-icon">💡</span>
-          <span data-i18n-html="p2-tip"><strong>Ce qui le distingue :</strong> Tree of Thoughts force l'IA à <em>évaluer</em> ses propres
+</div>
+<div class="tip-box">
+<span class="tip-icon">💡</span>
+<span data-i18n-html="p2-tip"><strong>Ce qui le distingue :</strong> Tree of Thoughts force l'IA à <em>évaluer</em> ses propres
             options selon des critères que vous définissez. Pas "donne-moi des idées" mais "compare ces chemins selon les critères que je te donne".</span>
-        </div>
-
-        <div class="prompt-accordion" id="acc2">
-          <button class="prompt-toggle" onclick="toggleAccordion('acc2')">
-            <span class="prompt-toggle-label" data-i18n="acc2-label">Exemple — Choisir une architecture de séquence</span>
-            <span class="prompt-toggle-icon">▾</span>
-          </button>
-          <div class="prompt-content">
-            <div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p2-role">Tu es un enseignant expérimenté.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p2-task">Développe et compare 5 architectures de progression différentes pour une séquence de 3h sur [sujet].</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-ctx">Contexte</span><span data-i18n="p2-ctx">Public : [décrire les apprenants].</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p2-fmt">Pour chaque architecture : description en 3-4 lignes, une cote sur 5 pour évaluer la pertinence pédagogique, une cote sur 5 pour évaluer l'originalité et une cote sur 5 pour évaluer la faisabilité. Justifie chacune de ces cotes.</span></div>
-            <div class="prompt-footer">
-              <button class="copy-btn" onclick="copyPrompt(this, 'p2')">
-                <span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
-                <span class="copy-btn-icon">⎘</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <span id="p2-fr" style="display:none">RÔLE : Tu es un enseignant expérimenté.
+</div>
+<div class="prompt-accordion" id="acc2">
+<button class="prompt-toggle" onclick="toggleAccordion('acc2')">
+<span class="prompt-toggle-label" data-i18n="acc2-label">Exemple — Choisir une architecture de séquence</span>
+<span class="prompt-toggle-icon">▾</span>
+</button>
+<div class="prompt-content">
+<div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p2-role">Tu es un enseignant expérimenté.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p2-task">Développe et compare 5 architectures de progression différentes pour une séquence de 3h sur [sujet].</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-ctx">Contexte</span><span data-i18n="p2-ctx">Public : [décrire les apprenants].</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p2-fmt">Pour chaque architecture : description en 3-4 lignes, une cote sur 5 pour évaluer la pertinence pédagogique, une cote sur 5 pour évaluer l'originalité et une cote sur 5 pour évaluer la faisabilité. Justifie chacune de ces cotes.</span></div>
+<div class="prompt-footer">
+<button class="copy-btn" onclick="copyPrompt(this, 'p2')">
+<span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
+<span class="copy-btn-icon">⎘</span>
+</button>
+</div>
+</div>
+</div>
+<span id="p2-fr" style="display:none">RÔLE : Tu es un enseignant expérimenté.
 TÂCHE : Développe et compare 5 architectures de progression différentes pour une séquence de 3h sur [sujet].
 CONTEXTE : Public : [décrire les apprenants].
 FORMAT : Pour chaque architecture : description en 3-4 lignes, une cote sur 5 pour évaluer la pertinence pédagogique, une cote sur 5 pour évaluer l'originalité et une cote sur 5 pour évaluer la faisabilité. Justifie chacune de ces cotes.</span>
-        <span id="p2-en" style="display:none">ROLE: You are an experienced teacher.
+<span id="p2-en" style="display:none">ROLE: You are an experienced teacher.
 TASK: Develop and compare 5 different progression architectures for a 3-hour sequence on [subject].
 CONTEXT: Audience: [describe learners].
 FORMAT: For each architecture: 3-4 line description, a rating out of 5 for pedagogical relevance, a rating out of 5 for originality, and a rating out of 5 for feasibility. Justify each rating.</span>
-
-        <div class="when-box">
-          <strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br>
-          <span data-i18n="p2-when">Après avoir défini les objectifs (Backward Design), au moment de décider de l'architecture globale. C'est le pattern le plus exigeant à piloter — réservez-le à une phase avancée si vos participants débutent avec le prompting.</span>
-        </div>
-      </section>
-
-      <!-- PATTERN 3 — SCAMPER -->
-      <section class="section" id="pattern3">
-        <div class="pattern-header">
-          <div class="pattern-num-badge">3</div>
-          <div class="pattern-title-text">SCAMPER</div>
-          <div class="pattern-phase-tag" data-i18n="phase3">③ Idéation</div>
-        </div>
-
-        <div class="pattern-body">
-          <p data-i18n-html="p3-body1">Technique de créativité développée par Bob Eberle à partir des travaux d'Osborn. Sept opérations appliquées
+<div class="when-box">
+<strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br/>
+<span data-i18n="p2-when">Après avoir défini les objectifs (Backward Design), au moment de décider de l'architecture globale. C'est le pattern le plus exigeant à piloter — réservez-le à une phase avancée si vos participants débutent avec le prompting.</span>
+</div>
+</section>
+<!-- PATTERN 3 — SCAMPER -->
+<section class="section" id="pattern3">
+<div class="pattern-header">
+<div class="pattern-num-badge">3</div>
+<div class="pattern-title-text">SCAMPER</div>
+<div class="pattern-phase-tag" data-i18n="phase3">③ Idéation</div>
+</div>
+<div class="pattern-body">
+<p data-i18n-html="p3-body1">Technique de créativité développée par Bob Eberle à partir des travaux d'Osborn. Sept opérations appliquées
             systématiquement à une activité existante pour générer des variantes : <strong>S</strong>ubstituer ·
             <strong>C</strong>ombiner · <strong>A</strong>dapter · <strong>M</strong>odifier · <strong>P</strong>roposer
             d'autres usages · <strong>É</strong>liminer · <strong>R</strong>éorganiser.</p>
-          <p data-i18n-html="p3-body2">SCAMPER est le pattern le plus <strong>accessible pour les enseignants qui débutent</strong>, parce que
+<p data-i18n-html="p3-body2">SCAMPER est le pattern le plus <strong>accessible pour les enseignants qui débutent</strong>, parce que
             chaque opération est compréhensible intuitivement et que le résultat est directement utilisable.</p>
-        </div>
-
-        <div class="prompt-accordion" id="acc3">
-          <button class="prompt-toggle" onclick="toggleAccordion('acc3')">
-            <span class="prompt-toggle-label" data-i18n="acc3-label">Exemple — Varier les formats d'activité</span>
-            <span class="prompt-toggle-icon">▾</span>
-          </button>
-          <div class="prompt-content">
-            <div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p3-role">Tu es un designer pédagogique créatif, spécialiste de la diversification des modalités d'apprentissage.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p3-task">Applique les 7 opérations SCAMPER à l'activité suivante et génère une variante pédagogique concrète pour chacune : [décrire l'activité de départ].</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-constraint">Contrainte</span><span data-i18n="p3-constraint">Public : [décrire les apprenants]. Les variantes doivent rester faisables sans matériel coûteux. Ne propose pas deux variantes du même format.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p3-fmt">7 blocs, un par lettre. Chaque bloc : lettre + nom de l'opération en gras, description en 2-3 phrases, durée estimée.</span></div>
-            <div class="prompt-footer">
-              <button class="copy-btn" onclick="copyPrompt(this, 'p3')">
-                <span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
-                <span class="copy-btn-icon">⎘</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <span id="p3-fr" style="display:none">RÔLE : Tu es un designer pédagogique créatif, spécialiste de la diversification des modalités d'apprentissage.
+</div>
+<div class="prompt-accordion" id="acc3">
+<button class="prompt-toggle" onclick="toggleAccordion('acc3')">
+<span class="prompt-toggle-label" data-i18n="acc3-label">Exemple — Varier les formats d'activité</span>
+<span class="prompt-toggle-icon">▾</span>
+</button>
+<div class="prompt-content">
+<div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p3-role">Tu es un designer pédagogique créatif, spécialiste de la diversification des modalités d'apprentissage.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p3-task">Applique les 7 opérations SCAMPER à l'activité suivante et génère une variante pédagogique concrète pour chacune : [décrire l'activité de départ].</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-constraint">Contrainte</span><span data-i18n="p3-constraint">Public : [décrire les apprenants]. Les variantes doivent rester faisables sans matériel coûteux. Ne propose pas deux variantes du même format.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p3-fmt">7 blocs, un par lettre. Chaque bloc : lettre + nom de l'opération en gras, description en 2-3 phrases, durée estimée.</span></div>
+<div class="prompt-footer">
+<button class="copy-btn" onclick="copyPrompt(this, 'p3')">
+<span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
+<span class="copy-btn-icon">⎘</span>
+</button>
+</div>
+</div>
+</div>
+<span id="p3-fr" style="display:none">RÔLE : Tu es un designer pédagogique créatif, spécialiste de la diversification des modalités d'apprentissage.
 TÂCHE : Applique les 7 opérations SCAMPER à l'activité suivante et génère une variante pédagogique concrète pour chacune : [décrire l'activité de départ].
 CONTRAINTE : Public : [décrire les apprenants]. Les variantes doivent rester faisables sans matériel coûteux. Ne propose pas deux variantes du même format.
 FORMAT : 7 blocs, un par lettre. Chaque bloc : lettre + nom de l'opération en gras, description en 2-3 phrases, durée estimée.</span>
-        <span id="p3-en" style="display:none">ROLE: You are a creative instructional designer, specializing in diversifying learning modalities.
+<span id="p3-en" style="display:none">ROLE: You are a creative instructional designer, specializing in diversifying learning modalities.
 TASK: Apply all 7 SCAMPER operations to the following activity and generate a concrete pedagogical variant for each: [describe the starting activity].
 CONSTRAINT: Audience: [describe learners]. Variants must remain feasible without costly materials. Do not propose two variants in the same format.
 FORMAT: 7 blocks, one per letter. Each block: letter + operation name in bold, 2-3 sentence description, estimated duration.</span>
-
-        <div class="when-box">
-          <strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br>
-          <span data-i18n="p3-when">Une fois l'architecture de la séquence choisie, pour enrichir et diversifier les activités à l'intérieur de cette structure. Point d'entrée idéal pour un premier atelier de formation au prompting.</span>
-        </div>
-      </section>
-
-      <!-- PATTERN 4 — SIX CHAPEAUX -->
-      <section class="section" id="pattern4">
-        <div class="pattern-header">
-          <div class="pattern-num-badge">4</div>
-          <div class="pattern-title-text" data-i18n="p4-title">Six Chapeaux</div>
-          <div class="pattern-phase-tag" data-i18n="phase4">④ Révision</div>
-        </div>
-
-        <div class="pattern-body">
-          <p data-i18n-html="p4-body1">De Bono (1985) propose d'isoler différents types de raisonnement en les associant à des "chapeaux" de
+<div class="when-box">
+<strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br/>
+<span data-i18n="p3-when">Une fois l'architecture de la séquence choisie, pour enrichir et diversifier les activités à l'intérieur de cette structure. Point d'entrée idéal pour un premier atelier de formation au prompting.</span>
+</div>
+</section>
+<!-- PATTERN 4 — SIX CHAPEAUX -->
+<section class="section" id="pattern4">
+<div class="pattern-header">
+<div class="pattern-num-badge">4</div>
+<div class="pattern-title-text" data-i18n="p4-title">Six Chapeaux</div>
+<div class="pattern-phase-tag" data-i18n="phase4">④ Révision</div>
+</div>
+<div class="pattern-body">
+<p data-i18n-html="p4-body1">De Bono (1985) propose d'isoler différents types de raisonnement en les associant à des "chapeaux" de
             couleur : <strong>🤍 faits · 🖤 risques · ❤️ émotions · 💛 optimisme · 💚 créativité · 💙
               méta-réflexion</strong>.</p>
-          <p data-i18n-html="p4-body2">En prompting, cette technique est utile non pas pour créer une séquence, mais pour en <strong>tester la
+<p data-i18n-html="p4-body2">En prompting, cette technique est utile non pas pour créer une séquence, mais pour en <strong>tester la
               solidité</strong> une fois ébauché. Elle évite de mélanger les registres et produit une critique
             structurée, psychologiquement plus acceptable dans un contexte de travail collaboratif.</p>
-        </div>
-
-        <div class="prompt-accordion" id="acc4">
-          <button class="prompt-toggle" onclick="toggleAccordion('acc4')">
-            <span class="prompt-toggle-label" data-i18n="acc4-label">Exemple — Analyser une séquence sous 6 angles</span>
-            <span class="prompt-toggle-icon">▾</span>
-          </button>
-          <div class="prompt-content">
-            <div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p4-role">Tu es un consultant pédagogique externe chargé d'évaluer cette séquence.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p4-task">Analyse la séquence suivante en appliquant successivement les six chapeaux de De Bono : [décrire la séquence].</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-constraint">Contrainte</span><span data-i18n="p4-constraint">Public cible : [décrire les apprenants]. Traite chaque chapeau séparément et complètement avant de passer au suivant.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p4-fmt">6 sections titrées avec emoji + nom. Chaque section : 3 à 5 observations en liste.</span></div>
-            <div class="prompt-footer">
-              <button class="copy-btn" onclick="copyPrompt(this, 'p4')">
-                <span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
-                <span class="copy-btn-icon">⎘</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <span id="p4-fr" style="display:none">RÔLE : Tu es un consultant pédagogique externe chargé d'évaluer cette séquence.
+</div>
+<div class="prompt-accordion" id="acc4">
+<button class="prompt-toggle" onclick="toggleAccordion('acc4')">
+<span class="prompt-toggle-label" data-i18n="acc4-label">Exemple — Analyser une séquence sous 6 angles</span>
+<span class="prompt-toggle-icon">▾</span>
+</button>
+<div class="prompt-content">
+<div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p4-role">Tu es un consultant pédagogique externe chargé d'évaluer cette séquence.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p4-task">Analyse la séquence suivante en appliquant successivement les six chapeaux de De Bono : [décrire la séquence].</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-constraint">Contrainte</span><span data-i18n="p4-constraint">Public cible : [décrire les apprenants]. Traite chaque chapeau séparément et complètement avant de passer au suivant.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p4-fmt">6 sections titrées avec emoji + nom. Chaque section : 3 à 5 observations en liste.</span></div>
+<div class="prompt-footer">
+<button class="copy-btn" onclick="copyPrompt(this, 'p4')">
+<span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
+<span class="copy-btn-icon">⎘</span>
+</button>
+</div>
+</div>
+</div>
+<span id="p4-fr" style="display:none">RÔLE : Tu es un consultant pédagogique externe chargé d'évaluer cette séquence.
 TÂCHE : Analyse la séquence suivante en appliquant successivement les six chapeaux de De Bono : [décrire la séquence].
 CONTRAINTE : Public cible : [décrire les apprenants]. Traite chaque chapeau séparément et complètement avant de passer au suivant.
 FORMAT : 6 sections titrées. Chaque section : 3 à 5 observations en liste.</span>
-        <span id="p4-en" style="display:none">ROLE: You are an external pedagogical consultant tasked with evaluating this sequence.
+<span id="p4-en" style="display:none">ROLE: You are an external pedagogical consultant tasked with evaluating this sequence.
 TASK: Analyze the following sequence by successively applying De Bono's six thinking hats: [describe the sequence].
 CONSTRAINT: Target audience: [describe learners]. Treat each hat separately and completely before moving to the next.
 FORMAT: 6 titled sections with emoji + name. Each section: 3 to 5 observations in a list.</span>
-
-        <div class="when-box">
-          <strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br>
-          <span data-i18n="p4-when">Après une première version complète de la séquence, comme protocole de relecture structurée.</span>
-        </div>
-      </section>
-
-      <!-- PATTERN 5 — ROLE-PLAYING -->
-      <section class="section" id="pattern5">
-        <div class="pattern-header">
-          <div class="pattern-num-badge">5</div>
-          <div class="pattern-title-text">Role-Playing Constraint</div>
-          <div class="pattern-phase-tag" data-i18n="phase5">⑤ Robustesse</div>
-        </div>
-
-        <div class="pattern-body">
-          <p data-i18n-html="p5-body1">Ce pattern consiste à demander à l'IA de se mettre successivement dans la peau des différents acteurs de la
+<div class="when-box">
+<strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br/>
+<span data-i18n="p4-when">Après une première version complète de la séquence, comme protocole de relecture structurée.</span>
+</div>
+</section>
+<!-- PATTERN 5 — ROLE-PLAYING -->
+<section class="section" id="pattern5">
+<div class="pattern-header">
+<div class="pattern-num-badge">5</div>
+<div class="pattern-title-text">Role-Playing Constraint</div>
+<div class="pattern-phase-tag" data-i18n="phase5">⑤ Robustesse</div>
+</div>
+<div class="pattern-body">
+<p data-i18n-html="p5-body1">Ce pattern consiste à demander à l'IA de se mettre successivement dans la peau des différents acteurs de la
             situation pédagogique. Fondement théorique solide : des recherches en psychologie sociale (Batson et al.)
             ont montré que la <strong>prise de perspective</strong> améliore la qualité des décisions dans des
             situations complexes impliquant plusieurs parties prenantes.</p>
-          <p data-i18n-html="p5-body2">Il permet de détecter les <strong>angles morts de l'expert</strong> — ce qu'un enseignant qui maîtrise la
+<p data-i18n-html="p5-body2">Il permet de détecter les <strong>angles morts de l'expert</strong> — ce qu'un enseignant qui maîtrise la
             matière ne voit plus, parce qu'il a oublié ce que ça fait de ne pas la maîtriser.</p>
-        </div>
-
-        <div class="prompt-accordion" id="acc5">
-          <button class="prompt-toggle" onclick="toggleAccordion('acc5')">
-            <span class="prompt-toggle-label" data-i18n="acc5-label">Exemple — Tester la séquence depuis 3 points de vue</span>
-            <span class="prompt-toggle-icon">▾</span>
-          </button>
-          <div class="prompt-content">
-            <div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p5-role">Tu vas jouer successivement 3 rôles distincts. Reste dans chaque rôle jusqu'à la fin de la section correspondante.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p5-task">Simule l'expérience de cette séquence depuis trois points de vue différents : [décrire la séquence].</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-ctx">Contexte</span><span data-i18n="p5-ctx">Rôle 1 — Apprenant de [âge/profil], fatigué après une journée de stage, peu convaincu de l'utilité du cours. Réactions honnêtes, y compris négatives. / Rôle 2 — Enseignant, 3 semaines plus tard, en train de corriger les évaluations. Quels apprentissages sont solides, lesquels restent fragiles ? / Rôle 3 — Formateur externe observant la classe pour la première fois. Regard neutre.</span></div>
-            <div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p5-fmt">3 sections titrées. Chaque section en prose courte (10-12 lignes max). Terminer chaque section par une phrase résumant l'enseignement principal de ce point de vue.</span></div>
-            <div class="prompt-footer">
-              <button class="copy-btn" onclick="copyPrompt(this, 'p5')">
-                <span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
-                <span class="copy-btn-icon">⎘</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <span id="p5-fr" style="display:none">RÔLE : Tu vas jouer successivement 3 rôles distincts. Reste dans chaque rôle jusqu'à la fin de la section correspondante.
+</div>
+<div class="prompt-accordion" id="acc5">
+<button class="prompt-toggle" onclick="toggleAccordion('acc5')">
+<span class="prompt-toggle-label" data-i18n="acc5-label">Exemple — Tester la séquence depuis 3 points de vue</span>
+<span class="prompt-toggle-icon">▾</span>
+</button>
+<div class="prompt-content">
+<div class="rtcf-row"><span class="rtcf-tag tag-r" data-i18n="tag-role">Rôle</span><span data-i18n="p5-role">Tu vas jouer successivement 3 rôles distincts. Reste dans chaque rôle jusqu'à la fin de la section correspondante.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-ta" data-i18n="tag-task">Tâche</span><span data-i18n="p5-task">Simule l'expérience de cette séquence depuis trois points de vue différents : [décrire la séquence].</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-co" data-i18n="tag-ctx">Contexte</span><span data-i18n="p5-ctx">Rôle 1 — Apprenant de [âge/profil], fatigué après une journée de stage, peu convaincu de l'utilité du cours. Réactions honnêtes, y compris négatives. / Rôle 2 — Enseignant, 3 semaines plus tard, en train de corriger les évaluations. Quels apprentissages sont solides, lesquels restent fragiles ? / Rôle 3 — Formateur externe observant la classe pour la première fois. Regard neutre.</span></div>
+<div class="rtcf-row"><span class="rtcf-tag tag-f" data-i18n="tag-fmt">Format</span><span data-i18n="p5-fmt">3 sections titrées. Chaque section en prose courte (10-12 lignes max). Terminer chaque section par une phrase résumant l'enseignement principal de ce point de vue.</span></div>
+<div class="prompt-footer">
+<button class="copy-btn" onclick="copyPrompt(this, 'p5')">
+<span class="copy-btn-text" data-i18n="copy-btn">Copier</span>
+<span class="copy-btn-icon">⎘</span>
+</button>
+</div>
+</div>
+</div>
+<span id="p5-fr" style="display:none">RÔLE : Tu vas jouer successivement 3 rôles distincts. Reste dans chaque rôle jusqu'à la fin de la section correspondante.
 TÂCHE : Simule l'expérience de cette séquence depuis trois points de vue différents : [décrire la séquence].
 CONTEXTE : Rôle 1 — Apprenant de [âge/profil], fatigué après une journée de stage, peu convaincu de l'utilité du cours. Réactions honnêtes, y compris négatives. / Rôle 2 — Enseignant, 3 semaines plus tard, en train de corriger les évaluations. Quels apprentissages sont solides, lesquels restent fragiles ? / Rôle 3 — Formateur externe observant la classe pour la première fois. Regard neutre.
 FORMAT : 3 sections titrées. Chaque section en prose courte (10-12 lignes max). Terminer chaque section par une phrase résumant l'enseignement principal de ce point de vue.</span>
-        <span id="p5-en" style="display:none">ROLE: You will play 3 distinct roles successively. Stay in each role until the end of the corresponding section.
+<span id="p5-en" style="display:none">ROLE: You will play 3 distinct roles successively. Stay in each role until the end of the corresponding section.
 TASK: Simulate the experience of this sequence from three different perspectives: [describe the sequence].
 CONTEXT: Role 1 — Learner of [age/profile], tired after a day of internship, unconvinced of the course's usefulness. Honest reactions, including negative ones. / Role 2 — Teacher, 3 weeks later, correcting assessments. Which learnings are solid, which remain fragile? / Role 3 — External trainer observing the class for the first time. Neutral perspective.
 FORMAT: 3 titled sections. Each section in short prose (10-12 lines max). End each section with a sentence summarizing the main insight from that perspective.</span>
-
-        <div class="when-box">
-          <strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br>
-          <span data-i18n="p5-when">En complément des Six Chapeaux, après une première version complète. Particulièrement précieux pour les publics hétérogènes ou éloignés de la culture scolaire — formations professionnelles, publics allophones.</span>
-        </div>
-      </section>
-
-      <!-- PIPELINE -->
-      <section class="section" id="pipeline">
-        <p style="margin-bottom:1.75rem; font-size:0.97rem; line-height:1.75;" data-i18n="pipeline-intro">Ces cinq patterns ne s'excluent pas — ils s'articulent dans un ordre logique qui correspond aux grandes phases de conception d'une séquence. Cliquez sur chaque étape pour aller directement au pattern correspondant.</p>
-
-        <div class="pipeline-wrap">
-          <div class="pipeline-title" data-i18n="pipeline-title">Pipeline de conception</div>
-          <div class="pipeline-subtitle" data-i18n="pipeline-subtitle">De l'objectif à la séquence robuste — 5 étapes</div>
-
-          <div class="pipeline-steps">
-
-            <div class="p-step" onclick="showSection('pattern1', document.querySelectorAll('.nav-tab')[1], 2)">
-              <div class="p-step-num">1</div>
-              <div class="p-step-body">
-                <div class="p-step-name">Backward Design</div>
-                <div class="p-step-desc" data-i18n="ps1-desc">Définir objectifs → preuves → activités en trois passes séquentielles</div>
-              </div>
-              <div class="p-step-arrow">→</div>
-            </div>
-
-            <div class="p-connector"></div>
-
-            <div class="p-step" onclick="showSection('pattern2', document.querySelectorAll('.nav-tab')[2], 3)">
-              <div class="p-step-num">2</div>
-              <div class="p-step-body">
-                <div class="p-step-name">Tree of Thoughts</div>
-                <div class="p-step-desc" data-i18n="ps2-desc">Choisir l'architecture de progression en comparant plusieurs chemins</div>
-              </div>
-              <div class="p-step-arrow">→</div>
-            </div>
-
-            <div class="p-connector"></div>
-
-            <div class="p-step" onclick="showSection('pattern3', document.querySelectorAll('.nav-tab')[3], 4)">
-              <div class="p-step-num">3</div>
-              <div class="p-step-body">
-                <div class="p-step-name">SCAMPER</div>
-                <div class="p-step-desc" data-i18n="ps3-desc">Diversifier et enrichir les activités à l'intérieur de l'architecture</div>
-              </div>
-              <div class="p-step-arrow">→</div>
-            </div>
-
-            <div class="p-connector"></div>
-
-            <div class="p-step" onclick="showSection('pattern4', document.querySelectorAll('.nav-tab')[4], 5)">
-              <div class="p-step-num">4</div>
-              <div class="p-step-body">
-                <div class="p-step-name" data-i18n="nav-p4">Six Chapeaux</div>
-                <div class="p-step-desc" data-i18n="ps4-desc">Réviser la cohérence et identifier les fragilités sous 6 angles</div>
-              </div>
-              <div class="p-step-arrow">→</div>
-            </div>
-
-            <div class="p-connector"></div>
-
-            <div class="p-step" onclick="showSection('pattern5', document.querySelectorAll('.nav-tab')[5], 6)">
-              <div class="p-step-num">5</div>
-              <div class="p-step-body">
-                <div class="p-step-name">Role-Playing Constraint</div>
-                <div class="p-step-desc" data-i18n="ps5-desc">Simuler l'expérience vécue par les apprenants et l'enseignant</div>
-              </div>
-              <div class="p-step-arrow">→</div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="outro-card">
-          <h3 data-i18n="outro-title">Ce que ces patterns ne font pas</h3>
-          <p data-i18n="outro-p1">Ces modèles n'éliminent pas la réflexion pédagogique : ils l'outillent. Une séquence conçue avec ces patterns sera toujours aussi bonne que les informations de contexte fournies dans les prompts. Le paramètre le plus déterminant n'est pas le pattern choisi — c'est la précision avec laquelle vous décrivez votre public, vos contraintes et vos objectifs.</p>
-          <p data-i18n="outro-p2">Un prompt qui dit "fais-moi un cours sur la gestion du temps" n'utilisera jamais aussi bien les patterns qu'un prompt qui précise le niveau, le profil des apprenants, la durée, et ce que vous voulez qu'ils soient capables de faire concrètement à la fin.</p>
-          <p style="margin-bottom:0; color: var(--retro-teal); font-weight:600;" data-i18n="outro-p3">Si vous débutez : commencez par SCAMPER, puis Backward Design. Tree of Thoughts devient naturel une fois habitué à guider l'IA en plusieurs étapes successives.</p>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ── FOOTER ── -->
-    <footer>
-      <div class="footer-text" data-i18n="footer-text">Guide pratique · IA &amp; pédagogie · Reproduction libre pour usage pédagogique non commercial</div>
-      <div class="footer-logo">PROMPT<span>DIVERGENT</span></div>
-    </footer>
-
-  <div class="ab-attribution" style="text-align:center;margin-top:2rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,0.25);font-size:0.8rem;opacity:0.65;">
-  <a href="https://www.linkedin.com/in/antonin-bareau/" target="_blank" rel="noopener" style="font-weight:bold;color:inherit;text-decoration:none;">Antonin Bareau</a>
-  &nbsp;&mdash;&nbsp;
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Licence CC BY-SA 4.0</a>
+<div class="when-box">
+<strong data-i18n="when-label">⚑ Quand l'utiliser</strong><br/>
+<span data-i18n="p5-when">En complément des Six Chapeaux, après une première version complète. Particulièrement précieux pour les publics hétérogènes ou éloignés de la culture scolaire — formations professionnelles, publics allophones.</span>
+</div>
+</section>
+<!-- PIPELINE -->
+<section class="section" id="pipeline">
+<p data-i18n="pipeline-intro" style="margin-bottom:1.75rem; font-size:0.97rem; line-height:1.75;">Ces cinq patterns ne s'excluent pas — ils s'articulent dans un ordre logique qui correspond aux grandes phases de conception d'une séquence. Cliquez sur chaque étape pour aller directement au pattern correspondant.</p>
+<div class="pipeline-wrap">
+<div class="pipeline-title" data-i18n="pipeline-title">Pipeline de conception</div>
+<div class="pipeline-subtitle" data-i18n="pipeline-subtitle">De l'objectif à la séquence robuste — 5 étapes</div>
+<div class="pipeline-steps">
+<div class="p-step" onclick="showSection('pattern1', document.querySelectorAll('.nav-tab')[1], 2)">
+<div class="p-step-num">1</div>
+<div class="p-step-body">
+<div class="p-step-name">Backward Design</div>
+<div class="p-step-desc" data-i18n="ps1-desc">Définir objectifs → preuves → activités en trois passes séquentielles</div>
+</div>
+<div class="p-step-arrow">→</div>
+</div>
+<div class="p-connector"></div>
+<div class="p-step" onclick="showSection('pattern2', document.querySelectorAll('.nav-tab')[2], 3)">
+<div class="p-step-num">2</div>
+<div class="p-step-body">
+<div class="p-step-name">Tree of Thoughts</div>
+<div class="p-step-desc" data-i18n="ps2-desc">Choisir l'architecture de progression en comparant plusieurs chemins</div>
+</div>
+<div class="p-step-arrow">→</div>
+</div>
+<div class="p-connector"></div>
+<div class="p-step" onclick="showSection('pattern3', document.querySelectorAll('.nav-tab')[3], 4)">
+<div class="p-step-num">3</div>
+<div class="p-step-body">
+<div class="p-step-name">SCAMPER</div>
+<div class="p-step-desc" data-i18n="ps3-desc">Diversifier et enrichir les activités à l'intérieur de l'architecture</div>
+</div>
+<div class="p-step-arrow">→</div>
+</div>
+<div class="p-connector"></div>
+<div class="p-step" onclick="showSection('pattern4', document.querySelectorAll('.nav-tab')[4], 5)">
+<div class="p-step-num">4</div>
+<div class="p-step-body">
+<div class="p-step-name" data-i18n="nav-p4">Six Chapeaux</div>
+<div class="p-step-desc" data-i18n="ps4-desc">Réviser la cohérence et identifier les fragilités sous 6 angles</div>
+</div>
+<div class="p-step-arrow">→</div>
+</div>
+<div class="p-connector"></div>
+<div class="p-step" onclick="showSection('pattern5', document.querySelectorAll('.nav-tab')[5], 6)">
+<div class="p-step-num">5</div>
+<div class="p-step-body">
+<div class="p-step-name">Role-Playing Constraint</div>
+<div class="p-step-desc" data-i18n="ps5-desc">Simuler l'expérience vécue par les apprenants et l'enseignant</div>
+</div>
+<div class="p-step-arrow">→</div>
 </div>
 </div>
-
-  <script>
+</div>
+<div class="outro-card">
+<h3 data-i18n="outro-title">Ce que ces patterns ne font pas</h3>
+<p data-i18n="outro-p1">Ces modèles n'éliminent pas la réflexion pédagogique : ils l'outillent. Une séquence conçue avec ces patterns sera toujours aussi bonne que les informations de contexte fournies dans les prompts. Le paramètre le plus déterminant n'est pas le pattern choisi — c'est la précision avec laquelle vous décrivez votre public, vos contraintes et vos objectifs.</p>
+<p data-i18n="outro-p2">Un prompt qui dit "fais-moi un cours sur la gestion du temps" n'utilisera jamais aussi bien les patterns qu'un prompt qui précise le niveau, le profil des apprenants, la durée, et ce que vous voulez qu'ils soient capables de faire concrètement à la fin.</p>
+<p data-i18n="outro-p3" style="margin-bottom:0; color: var(--retro-teal); font-weight:600;">Si vous débutez : commencez par SCAMPER, puis Backward Design. Tree of Thoughts devient naturel une fois habitué à guider l'IA en plusieurs étapes successives.</p>
+</div>
+</section>
+</main>
+<!-- ── FOOTER ── -->
+<footer>
+<div class="footer-text" data-i18n="footer-text">Guide pratique · IA &amp; pédagogie · Reproduction libre pour usage pédagogique non commercial</div>
+<div class="footer-logo">PROMPT<span>DIVERGENT</span></div>
+</footer>
+<div class="ab-attribution" style="text-align:center;margin-top:2rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,0.25);font-size:0.8rem;opacity:0.65;">
+<a href="https://www.linkedin.com/in/antonin-bareau/" rel="noopener" style="font-weight:bold;color:inherit;text-decoration:none;" target="_blank">Antonin Bareau</a>
+   — 
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" style="color:inherit;text-decoration:none;" target="_blank">Licence CC BY-SA 4.0</a>
+</div></div>
+<script>
     /* ── NAV / ACCORDION / COPY ──────────────────────── */
     function showSection(id, tabEl, stepNum) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
@@ -1689,7 +1627,5 @@ FORMAT: 3 titled sections. Each section in short prose (10-12 lines max). End ea
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     }
   </script>
-
 </body>
-
 </html>
